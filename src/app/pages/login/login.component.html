@@ -1,0 +1,42 @@
+<div class="flex items-center justify-center h-screen">
+  <p-card class="w-md">
+    <ng-template #title>Login</ng-template>
+    <form class="space-y-1" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      <div class="grid grid-cols-1">
+        <label for="username">Username</label>
+        <input
+          id="username"
+          type="text"
+          pInputText
+          formControlName="username"
+          name="username"
+          placeholder="Masukkan username"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 w-full">
+        <label for="password">Password</label>
+        <p-password
+          [style]="{ width: '100%' }"
+          [inputStyle]="{ width: '100%' }"
+          [toggleMask]="true"
+          class="w-full"
+          id="password"
+          formControlName="password"
+          name="password"
+          placeholder="Masukkan password"
+          [feedback]="false"
+        ></p-password>
+      </div>
+
+      <div class="flex justify-content-end mt-4">
+        <button
+          pButton
+          type="submit"
+          label="Submit"
+          class="p-button-primary"
+        ></button>
+      </div>
+    </form>
+  </p-card>
+</div>

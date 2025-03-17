@@ -1,0 +1,5 @@
+::ng-deep .custom-btn .p-button {
+  background-color: white !important;
+  color: #f4b304 !important; /* Amber-400 */
+  border: none;
+}

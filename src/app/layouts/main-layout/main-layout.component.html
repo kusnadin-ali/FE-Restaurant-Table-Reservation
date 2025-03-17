@@ -1,1 +1,15 @@
-<p>main-layout works!</p>
+<div class="flex flex-col h-screen bg-slate-50">
+  <app-main-navbar></app-main-navbar>
+  <div class="flex flex-1">
+    <!-- Sidebar -->
+    <div class="px-2 w-64 py-4">
+      <app-main-side-menu></app-main-side-menu>
+    </div>
+
+    <!-- Content -->
+    <div class="flex-1 p-4">
+      <p>Content</p>
+      <i class="pi pi-check"></i>
+    </div>
+  </div>
+</div>
