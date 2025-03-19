@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../../../shared/shared.module';
 import { MenuItem } from 'primeng/api';
+import { ITEM_SIDE_MENU } from './item-side-menu';
 
 @Component({
   selector: 'app-main-side-menu',
@@ -12,26 +13,6 @@ export class MainSideMenuComponent {
   items: MenuItem[] | undefined;
 
   ngOnInit() {
-    this.items = [
-      {
-        items: [
-          {
-            label: 'Dashboard',
-            icon: 'pi pi-home',
-            routerLink: '/dashboard',
-          },
-        ],
-      },
-      {
-        label: 'Users',
-        items: [
-          {
-            label: 'Daftar User',
-            icon: 'pi pi-users',
-            routerLink: '/list-users',
-          },
-        ],
-      },
-    ];
+    this.items = ITEM_SIDE_MENU;
   }
 }

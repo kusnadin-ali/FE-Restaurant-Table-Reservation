@@ -5,6 +5,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from './general/guard/auth.guard';
 import { NoAuthGuard } from './general/guard/no-auth.guard';
+import { ListUserComponent } from './pages/users/list-user/list-user.component';
 
 export const routes: Routes = [
   {
@@ -15,12 +16,20 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    canActivate: [NoAuthGuard],
+    // canActivate: [NoAuthGuard],
 
   },
   {
     path: 'dashboard',
     component: DashboardComponent,
     canActivate: [AuthGuard],
+  },
+  {
+    path: 'list-user/restaurant',
+    component: ListUserComponent
+  },
+  {
+    path: 'list-user/customer',
+    component: ListUserComponent
   }
 ];

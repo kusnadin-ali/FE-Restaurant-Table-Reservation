@@ -13,10 +13,9 @@ import { logout } from '../../../general/store/auth/auth.actions';
 })
 export class MainNavbarComponent {
 
-  constructor(private router: Router, private store: Store, private cookieService: CookieService) {}
+  constructor(private router: Router, private cookieService: CookieService) {}
 
   logout() {
-    this.store.dispatch(logout());
     this.cookieService.delete('auth_token');
     this.cookieService.delete('user_type');
     this.router.navigateByUrl('/');
