@@ -7,6 +7,9 @@ import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { RouterLink, RouterModule } from '@angular/router';
 import { Menu } from 'primeng/menu';
+import { TableModule } from 'primeng/table';
+import { ProgressSpinner } from 'primeng/progressspinner';
+import { Toast } from 'primeng/toast';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { Menu } from 'primeng/menu';
     InputTextModule,
     RouterModule,
     RouterLink,
-    Menu
+    Menu,
+    TableModule,
+    ProgressSpinner,
+    Toast
   ],
   exports: [
     ButtonModule,
@@ -31,7 +37,10 @@ import { Menu } from 'primeng/menu';
     InputTextModule,
     RouterModule,
     RouterLink,
-    Menu
+    Menu,
+    TableModule,
+    ProgressSpinner,
+    Toast
   ]
 })
 export class SharedModule { }

@@ -1,1 +1,6 @@
+<p-toast />
+<!-- app.component.html -->
+<div *ngIf="isLoading$ " class="overlay">
+  <p-progress-spinner ariaLabel="loading"></p-progress-spinner>
+</div>
 <router-outlet></router-outlet>
